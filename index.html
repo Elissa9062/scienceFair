@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+<title>Science & Makers' Fair - Galaxy Int'l School</title>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <img src="./images/logo.png" alt="Galaxy International School logo" class="logo">
+
+        <nav class="nav">
+
+            <a href="" class="navlinks">HOME</a>
+            <a href="" class="navlinks">ABOUT US</a>
+            <a href="" class="navlinks">UFP</a>
+            <a href="" class="navlinks">ACADEMICS</a>
+            <a href="" class="navlinks">ADMISSION</a>
+            <a href="" class="navlinks">FACILITIES</a>
+            <a href="" class="navlinks">GALLERY</a>
+            <a href="" class="navlinks">ACHIEVEMENTS</a>
+            <a href="" class="navlinks">EVENTS</a>
+            <a href="" class="navlinks">CONTACT</a>
+
+        </nav>
+
+    </header>
+
+    <section class="sectionone">
+        <div class="overlay"></div>
+        <h1>Galaxy International School</h1>
+
+        <h2>Science and Makers' Fair</h2>
+    
+    </section>
+
+
+    <section class="sectiontwo">
+        <div class="slider">
+            <div class="slide">
+                <input type="radio" name="img" id="img-1" value="img-1" title="Nav">
+                <input type="radio" name="img" id="img-2" value="img-2" title="Nav">
+                <input type="radio" name="img" id="img-3" value="img-3" title="Nav">
+                <input type="radio" name="img" id="img-4" value="img-4" title="Nav">
+
+                <div class="slides show">
+                    <img src="./images/slideone.png" alt="" class="slide-img">
+                </div>
+                <div class="slides">
+                    <img src="./images/slidetwo.png" alt="" class="slide-img">
+                </div>
+                <div class="slides">
+                    <img src="./images/slidethree.png" alt="" class="slide-img">
+                </div>
+                <div class="slides">
+                    <img src="./images/slidefour.png" alt="" class="slide-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="radios">
+
+        </div>
+
+        <p class="paraone">
+            It is one of the most interesting events at Galaxy. It gives opportunity to students to apply the knowledge acquired during lessons by preparing a project and presenting it to others. Preparing a science fair project is an excellent example of what education experts call active learning.
+            ”Learning is not a spectator sport. Students do not learn much by just sitting in classes listening to teachers, memorizing  repackaged assignments, and spitting out the answers. They
+            must talk about what they are learning, write effectively about it, relate it to past experiences and apply it to their daily lives. They must make what they learn part of themselves.”
+        </p>
+
+    </section>
+
+
+
+
+    <section class="sectionthree">
+
+        <h3>18th Annual Science & Makers' Fair</h3>
+
+        <p class="paratwo">
+            Galaxy International School's 18th Annual Science and Makers' Fair will be held on Saturday, 20th May, 2023 at the Secondary Section. 
+        </p>
+
+        <h3>Sponsors</h3>
+
+        <div class="sponsors">
+            <img src="./images/everpacklogo.jpg" alt="" class="small" style="border-radius: 50%;">
+            <img src="./images/cfaologonobg.png" alt="" class="small">
+            <img src="./images/logo-cfaogroup.svg" alt="" class="small">
+            <img src="./images/perlawaterlogo.jpg" alt="" class="small" style="border-radius: 50px; width: 100px;">
+        </div>
+   </section>
+
+
+    <script>
+        // const slide = document.querySelectorAll('.slides')
+        let count = 1
+        setInterval(()=>{
+            // slide.forEach((i)=>{
+            //     i.classList.remove('show')
+            // })
+            // slide[count].classList.add('show')
+            document.getElementById('img-'+ count).checked=true
+            count++
+            if(count>4){
+                count = 1
+            }
+        }, 3000)
+    </script>
+</body>
+</html>
