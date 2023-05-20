@@ -132,10 +132,6 @@
         // const slide = document.querySelectorAll('.slides')
         let count = 1
         setInterval(()=>{
-            // slide.forEach((i)=>{
-            //     i.classList.remove('show')
-            // })
-            // slide[count].classList.add('show')
             document.getElementById('img-'+ count).checked=true
             count++
             if(count>4){
@@ -147,16 +143,16 @@
         const mediaQuery = window.matchMedia('(max-width: 900px)')
 
         if (mediaQuery.matches) {
-            let count1 = 1
+            let countsmall = 1
             setInterval(()=>{
                 // slide.forEach((i)=>{
                 //     i.classList.remove('show')
                 // })
                 // slide[count1].classList.add('show')
-                document.getElementById('imgs-'+ count1).checked=true
-                count1++
-                if(count1>4){
-                    count1 = 1
+                document.getElementById('imgs-'+ countsmall).checked=true
+                countsmall++
+                if(countsmall>4){
+                    countsmall = 1
                 }
             }, 1000)
         }
