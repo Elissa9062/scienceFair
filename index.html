@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 <title>Science & Makers' Fair - Galaxy Int'l School</title>
 
 
@@ -20,7 +22,12 @@
 <body>
     
     <header>
-        <img src="./images/logo.png" alt="Galaxy International School logo" class="logo">
+        <div class="logo-cover">
+            <img src="./images/logo.png" alt="Galaxy International School logo" class="logo">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </div>
 
         <nav class="nav">
 
@@ -71,9 +78,6 @@
             </div>
         </div>
 
-        <div class="radios">
-
-        </div>
 
         <p class="paraone">
             It is one of the most interesting events at Galaxy. It gives opportunity to students to apply the knowledge acquired during lessons by preparing a project and presenting it to others. Preparing a science fair project is an excellent example of what education experts call active learning.
@@ -97,14 +101,33 @@
         <h3>Sponsors</h3>
 
         <div class="sponsors">
-            <img src="./images/everpacklogo.jpg" alt="" class="small" style="border-radius: 50%;">
+            <!-- <div class="small-cover">
+                <img src="./images/everpacklogo.jpg" alt="" class="small" style="border-radius: 50%;">
+            </div>
+            <div class="small-cover">
+                <img src="./images/cfaologonobg.png" alt="" class="small">
+            </div>
+            <div class="small-cover">
+                <img src="./images/logo-cfaogroup.svg" alt="" class="small">
+            </div>
+            <div class="small-cover">
+                <img src="./images/perlawaterlogo.jpg" alt="" class="small" >
+            </div> -->
+            <input type="radio" name="img" id="imgs-1" value="imgs-1" title="Nav">
+            <input type="radio" name="img" id="imgs-2" value="imgs-2" title="Nav">
+            <input type="radio" name="img" id="imgs-3" value="imgs-3" title="Nav">
+            <input type="radio" name="img" id="imgs-4" value="imgs-4" title="Nav">
+
+
+            <img src="./images/everpacklogo.jpg" alt="" class="small top" style="border-radius: 50%;">
             <img src="./images/cfaologonobg.png" alt="" class="small">
             <img src="./images/logo-cfaogroup.svg" alt="" class="small">
-            <img src="./images/perlawaterlogo.jpg" alt="" class="small" style="border-radius: 50px; width: 100px;">
+            <img src="./images/perlawaterlogo.jpg" alt="" class="small" >
+            <!-- style="border-radius: 50px; width: 100px;"  -->
         </div>
    </section>
 
-
+   <script src="main.js"></script>
     <script>
         // const slide = document.querySelectorAll('.slides')
         let count = 1
@@ -119,6 +142,32 @@
                 count = 1
             }
         }, 3000)
+
+
+        const mediaQuery = window.matchMedia('(max-width: 900px)')
+
+        if (mediaQuery.matches) {
+            let count1 = 1
+            setInterval(()=>{
+                // slide.forEach((i)=>{
+                //     i.classList.remove('show')
+                // })
+                // slide[count1].classList.add('show')
+                document.getElementById('imgs-'+ count1).checked=true
+                count1++
+                if(count1>4){
+                    count1 = 1
+                }
+            }, 1000)
+        }else{
+            count1 = 0 
+        }
+
+        const menu = document.querySelector('.material-symbols-outlined')
+        const nav = document.querySelector('.nav')
+        menu.addEventListener('click', ()=>{
+            nav.classList.toggle('show1')
+        })
     </script>
 </body>
 </html>
